@@ -11,14 +11,11 @@ if __name__ == "__main__":
     load_dotenv()
     parser = argparse.ArgumentParser(description='Match CV against job description')
     parser.add_argument('--cv', type=str, default='data/cv.pdf', help='Path to CV PDF file')
-    parser.add_argument('--jd', type=str, default='data/jd.pdf', help='Path to job description PDF file')
+    parser.add_argument('--jd', type=str, default='data/job.pdf', help='Path to job description PDF file')
     args = parser.parse_args()
 
     cv_path = args.cv
     jd_path = args.jd
-
-    cv_path = "data/cv.pdf"
-    jd_path = "data/jd.pdf"
 
     matcher = JobMatcher(cv_path, jd_path)
     matcher.load_documents()

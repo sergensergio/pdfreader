@@ -3,7 +3,7 @@ Reads CV and job description in pdf format and outputs a json stating matching a
 Provide a Groq API key by creating a file .env with the entry GROQ_API_TOKEN=[YOUR_KEY]
 
 Example output:
-{
+
     "tech_stack_required": {
         "matched_skills": [
             "Python",
@@ -53,4 +53,3 @@ Example output:
             "AWS"
         ]
     }
-}

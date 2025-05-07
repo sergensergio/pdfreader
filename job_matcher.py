@@ -116,7 +116,7 @@ class JobMatcher:
                         "reason": "LLM call failed or returned invalid JSON"
                     })
 
-    def summarize_matching(self) -> None:
+    def summarize_matching(self, out_path: str) -> None:
         summary: Dict[str, Any] = {}
         total_score: float = 0
         total_possible: float = 0
@@ -150,5 +150,5 @@ class JobMatcher:
             "missing_required_skills": summary["tech_stack_required"]["missing_skills"],
         }
 
-        with open("data/cv_skill_matches.json", "w") as fp:
+        with open(out_path, "w") as fp:
             json.dump(summary, fp, indent=4)

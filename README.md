@@ -50,6 +50,5 @@ Example output:
         "missing_required_skills": [
             "TensorFlow",
             "Cloud technologies",
-            "AWS"
         ]
     }
